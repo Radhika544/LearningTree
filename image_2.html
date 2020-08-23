@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+html * {
+    font-family: Calibri !important;
+}
+
+/*margin top right bottom left */
+/* style the outer container */
+.outercontainer {
+  border-radius: 0px;
+  background-color: #c1c1c1;  
+  width:650px;
+  height:565px;
+  padding:2px;
+  margin:auto;
+  position:relative;
+} 
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #000000;
+  margin: 15px;
+  padding: 10px 0 5px 0;
+} 
+
+/* style the submit button */
+.btnStyle1 {  
+  width: 80%;
+  padding: 5px 0px 5px 5px;
+  border: none;
+  border-radius: 0px;
+  margin: 5px 5px 5px 70px;
+  opacity: 1;
+  display: inline-block;
+  font-size: 25px;  
+  line-height: 40px;
+  background-color: #00A881;
+  color: white;
+}
+
+.btnStyle2 {
+  width: 80%;
+  padding: 5px 15px 5px 0px;
+  border: none;
+  border-radius: 0px;
+  margin: 5px;
+  opacity: 0.75;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 40px;
+  background-color: #838383;
+  color: white;
+}
+
+.btnStyle3 {  
+  width: 81%;
+  padding: 5px 15px 5px 5px;
+  border: none;
+  border-radius: 0px;
+  margin: 5px 5px -75px 70px;
+  opacity: 1;
+  display: inline-block;
+  font-size: 32px;
+  line-height: 50px;
+  background-color: #00A881;
+  color: white;
+ font-weight: bold;
+}
+
+.hStyle {
+  width: 80%;
+  padding: 7px;
+  border: none;
+  border-radius: 0px;
+  margin: 5px 5px 5px 70px;
+  display: inline-block;
+  font-size: 40px;
+  color: white;
+  text-align:center;
+}
+
+.tboxStyle1 {
+  width: 70%;
+  padding: 5px 10px 5px 5px;
+  border-style:solid;
+  border-color:red;
+  border-width:1px;
+  border-radius: 0px;
+  margin: 5px 25px 5px 70px;
+  display: inline-block;
+  font-size: 22px;
+  opacity:1;
+  line-height:28px;
+  background-color: #000000;
+  color: white;
+}
+
+.tboxStyle2 {
+  width: 70%;
+  padding: 5px 5px 5px 10px;
+  border-style:solid;
+  border-color:red;
+  border-width:1px;
+  border-radius: 0px;
+  margin: 5px 10px 5px 25px;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 28px;
+  background-color: #000000;
+  color: white;
+}
+
+.tboxStyle3 {
+  width: 80%;
+  padding: 5px 0px 5px 5px;
+  border-style:solid;
+  border-color:red;
+  border-width:1px;
+  border-radius: 0px;
+  margin: 5px 5px 5px 70px;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 28px;
+  background-color: #000000;
+  color: white;
+}
+
+
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+margin-top:10px;
+margin-bottom:20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom:20px;
+}
+
+</style>
+</head>
+<body>
+<div class="outercontainer">
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col">
+      <input type="submit" value="Sign Up" class="btnStyle1">
+    </div>
+    <div class="col">
+      <input type="button" class="btnStyle2" value="Log In">
+  </div>
+  <div class="row">
+   <h2 class="hStyle"> Sign up for Free</h2>
+  </div>
+ <div class="row">
+    <div class="col">
+     <input type="text" class="tboxStyle1" name="firstname" placeholder="First Name*" required>       
+    </div>
+    <div class="col">
+    <input type="text" class="tboxStyle2" name="lastname" placeholder="Last Name*" required>
+  </div>
+  <div class="row">
+     <input type="text" class="tboxStyle3" name="emailaddress" placeholder="Email Address*" required>       
+    </div>
+   <div class="row">
+     <input type="text" class="tboxStyle3" name="password" placeholder="Set A Password*" required>       
+    </div>
+  <div class="row">
+      <input type="submit" value="GET STARTED" class="btnStyle3">
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
