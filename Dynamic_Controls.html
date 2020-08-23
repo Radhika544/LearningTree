@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<body onload="CreateDynamicControls()">
+<style>
+.divStyle1 {
+    width:50%;
+    text-align:center;
+    display: block;
+    background: #fff;
+    padding : 15px;
+    border : 1px solid #000;
+    margin:auto;
+    float:center;
+}
+
+.divStyle2 {
+    width:50%;
+    text-align:center;
+    display: block;
+    background: #fff;
+    padding : 15px;
+    border : 0px solid #000;
+    margin:auto;
+    float:center;
+}
+
+
+.btnStyle {
+     background-color:#2E86C1;
+     color:white;    
+     font-size:20px;
+     margin: 20px auto;
+     padding:7px;
+}
+
+
+.spnStyle {
+     background-color:#2E86C1;
+     color:white;    
+     font-size:22px;
+     margin: 10px auto;
+     padding:5px;
+align:center;
+}
+</style>
+<script>
+var divTag;
+function CreateDynamicControls() {
+//debugger;
+var divTag=CreateContainer();
+document.body.appendChild(divTag);
+for(var i=0;i<5;i++){
+CreateControl(i+1,divTag);
+}
+var spnTag=CreateSpan(divTag);
+document.body.appendChild(spnTag);
+}
+
+function CreateContainer(){
+//debugger;
+var divTag=document.createElement("div");
+divTag.innerHTML='';
+divTag.innerHTML="<br\>";
+var h1Tag=document.createElement("h1");
+divTag.setAttribute('class','divStyle1');
+var tNode=document.createTextNode('Dynamic Controls');
+h1Tag.appendChild(tNode);
+divTag.appendChild(h1Tag);
+return divTag;
+}
+
+function CreateControl(index, divTag){
+//debugger;
+var btnIndex=index;
+var btnName="BtnName"+btnIndex;
+var btnId="BtnId"+btnIndex;
+var btnValue="Invoke Method "+btnIndex;
+var btn = document.createElement("input");
+btn.setAttribute('type', 'button');
+btn.setAttribute('class','btnStyle');
+btn.setAttribute('name',btnName);
+btn.setAttribute('id',btnId);
+btn.setAttribute('value', btnValue);
+btn.style.display = "block";
+divTag.appendChild(btn);
+//debugger;
+btn.addEventListener('click',function() { 
+var value=btnValue;
+var index=btnIndex;
+AddEvent(value,index);
+},false);
+//btn.addEventListener('click',AddEvent.bind(btn,btnValue,btnIndex),false);
+return btn;
+}
+
+function AddEvent (value,index) {
+//debugger;
+if(this.type="button"){
+//debugger;  
+//alert(value+" is clicked with index "+index);
+UpdateSpan(value,index);
+console.log(value+" is clicked with index "+index);
+}
+}
+
+function CreateSpan(divTag){
+//debugger;
+var divTag=document.createElement("div");
+divTag.innerHTML='';
+var h1Tag=document.createElement("h1");
+divTag.setAttribute('class','divStyle2');
+var tNode=document.createTextNode('Event Log');
+h1Tag.appendChild(tNode);
+divTag.appendChild(h1Tag);
+var spnEle = document.createElement("span");
+spnEle.setAttribute('class','spnStyle');
+spnEle.setAttribute('id','dynSpnId');
+spnEle.innerHTML="No Button Clicked";
+divTag.appendChild(spnEle);
+return divTag;
+}
+
+function UpdateSpan(btnName,index) {
+debugger;
+var spnArr=this.document.getElementsByTagName('span');
+if(spnArr.length==1){
+var msg=btnName+" is clicked with index "+index;
+spnArr[0].innerHTML=msg;
+}
+}
+
+</script>
+
+</body>
+</html>
