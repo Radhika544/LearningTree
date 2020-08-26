@@ -1,0 +1,40 @@
+.divStyle1 {
+    width:50%;
+    text-align:center;
+    display: block;
+    background: #fff;
+    padding : 15px;
+    border : 1px solid #000;
+    margin:auto;
+    float:center;
+}
+
+.divStyle2 {
+    width:50%;
+    text-align:center;
+    display: block;
+    background: #fff;
+    padding : 15px;
+    border : 0px solid #000;
+    margin:auto;
+    float:center;
+}
+
+
+.btnStyle {
+     background-color:#2E86C1;
+     color:white;    
+     font-size:20px;
+     margin: 20px auto;
+     padding:7px;
+}
+
+
+.spnStyle {
+     background-color:#2E86C1;
+     color:white;    
+     font-size:22px;
+     margin: 10px auto;
+     padding:5px;
+align:center;
+}
